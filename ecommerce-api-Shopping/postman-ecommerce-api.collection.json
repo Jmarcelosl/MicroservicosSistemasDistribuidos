@@ -1,0 +1,151 @@
+{
+  "info": {
+    "_postman_id": "7d8f5b8f-7d4e-4b8d-9e73-ecommerce-api",
+    "name": "Ecommerce API",
+    "description": "Colecao Postman para testar os endpoints de usuarios da Ecommerce API.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8500"
+    },
+    {
+      "key": "user_id",
+      "value": "1"
+    },
+    {
+      "key": "cpf",
+      "value": "12345678900"
+    },
+    {
+      "key": "nome",
+      "value": "Ana Silva"
+    }
+  ],
+  "item": [
+    {
+      "name": "Usuarios",
+      "item": [
+        {
+          "name": "Listar usuarios",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/user",
+              "host": ["{{base_url}}"],
+              "path": ["user"]
+            }
+          }
+        },
+        {
+          "name": "Buscar usuario por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/user/{{user_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["user", "{{user_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Criar usuario",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Ana Silva\",\n  \"cpf\": \"12345678900\",\n  \"endereco\": \"Rua das Flores, 100\",\n  \"email\": \"ana.silva@example.com\",\n  \"telefone\": \"11999999999\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/user",
+              "host": ["{{base_url}}"],
+              "path": ["user"]
+            }
+          }
+        },
+        {
+          "name": "Editar usuario",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"ana.nova@example.com\",\n  \"telefone\": \"11888888888\",\n  \"endereco\": \"Avenida Central, 200\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/user/{{user_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["user", "{{user_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Buscar usuario por CPF",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/user/{{cpf}}/cpf",
+              "host": ["{{base_url}}"],
+              "path": ["user", "{{cpf}}", "cpf"]
+            }
+          }
+        },
+        {
+          "name": "Pesquisar usuarios por nome",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/user/search?nome={{nome}}",
+              "host": ["{{base_url}}"],
+              "path": ["user", "search"],
+              "query": [
+                {
+                  "key": "nome",
+                  "value": "{{nome}}"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Excluir usuario",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/user/{{user_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["user", "{{user_id}}"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

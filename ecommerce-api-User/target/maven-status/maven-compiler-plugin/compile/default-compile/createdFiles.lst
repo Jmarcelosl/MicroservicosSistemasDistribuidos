@@ -1,0 +1,7 @@
+com\senai\ecommerce_api\service\UserService.class
+com\senai\ecommerce_api\EcommerceApiApplication.class
+com\senai\ecommerce_api\model\User.class
+com\senai\ecommerce_api\controller\UserController.class
+com\senai\ecommerce_api\dto\UserDTO.class
+com\senai\ecommerce_api\repository\UserRepository.class
+com\senai\ecommerce_api\ServletInitializer.class
