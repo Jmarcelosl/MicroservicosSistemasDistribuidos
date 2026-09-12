@@ -1,0 +1,15 @@
+com\ecommerce\shopping_api\dto\ShopReportDTO.class
+com\ecommerce\shopping_api\model\Item.class
+com\ecommerce\shopping_api\ShoppingApiApplication.class
+com\ecommerce\shopping_api\converter\DTOConverter.class
+com\ecommerce\shopping_api\repository\ShopRepository.class
+com\ecommerce\shopping_api\dto\ItemDTO.class
+com\ecommerce\shopping_api\model\Shop.class
+com\ecommerce\shopping_api\ServletInitializer.class
+com\ecommerce\shopping_api\service\UserService.class
+com\ecommerce\shopping_api\dto\ShopDTO.class
+com\ecommerce\shopping_api\repository\ReportRepositoryImpl.class
+com\ecommerce\shopping_api\service\ShopService.class
+com\ecommerce\shopping_api\service\ProductService.class
+com\ecommerce\shopping_api\controller\ShopController.class
+com\ecommerce\shopping_api\repository\ReportRepository.class

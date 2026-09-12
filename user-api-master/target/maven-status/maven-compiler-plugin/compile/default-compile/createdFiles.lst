@@ -1,0 +1,8 @@
+com\ecommerce\user_api\controller\UserController.class
+com\ecommerce\user_api\service\UserService.class
+com\ecommerce\user_api\UserApiApplication.class
+com\ecommerce\user_api\ServletInitializer.class
+com\ecommerce\user_api\dto\UserDTO.class
+com\ecommerce\user_api\repository\UserRepository.class
+com\ecommerce\user_api\model\User.class
+com\ecommerce\user_api\converter\DTOConverter.class

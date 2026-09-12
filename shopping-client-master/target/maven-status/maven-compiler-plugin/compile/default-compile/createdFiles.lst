@@ -1,0 +1,6 @@
+com\ecommerce\shopping_client\dto\CategoryDTO.class
+com\ecommerce\shopping_client\dto\ItemDTO.class
+com\ecommerce\shopping_client\dto\ShopDTO.class
+com\ecommerce\shopping_client\ShoppingClientApplication.class
+com\ecommerce\shopping_client\dto\ProductDTO.class
+com\ecommerce\shopping_client\dto\UserDTO.class

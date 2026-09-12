@@ -1,0 +1,60 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "API Product",
+            "type": "shell",
+            "command": ".\\mvnw.cmd spring-boot:run",
+            "options": {
+                "cwd": "${workspaceFolder}/product-api-master"
+            },
+            "isBackground": true,
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "microservicos"
+            }
+        },
+        {
+            "label": "API Shopping",
+            "type": "shell",
+            "command": ".\\mvnw.cmd spring-boot:run",
+            "options": {
+                "cwd": "${workspaceFolder}/shopping-api-master"
+            },
+            "isBackground": true,
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "microservicos"
+            }
+        },
+        {
+            "label": "API User",
+            "type": "shell",
+            "command": ".\\mvnw.cmd spring-boot:run",
+            "options": {
+                "cwd": "${workspaceFolder}/user-api-master"
+            },
+            "isBackground": true,
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "microservicos"
+            }
+        },
+        {
+            "label": "Rodar 3 APIs",
+            "dependsOn": [
+                "API Product",
+                "API Shopping",
+                "API User"
+            ],
+            "dependsOrder": "parallel",
+            "problemMatcher": []
+        }
+    ]
+}
