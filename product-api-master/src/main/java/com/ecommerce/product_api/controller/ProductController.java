@@ -66,11 +66,6 @@ public class ProductController {
     }
 
 
-    @PostMapping("/{id}")
-    public ProductDTO editProduct(@PathVariable Long id,@RequestBody ProductDTO productDTO) {
-        return productService.editProduct(id, productDTO);
-    }
-
     @GetMapping("/pageable")
     public Page<ProductDTO> getProductsPage(Pageable pageable) {
         return productService.getAllPage(pageable);

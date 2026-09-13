@@ -1,18 +1,20 @@
 package com.ecommerce.product_api.service;
 
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+
 import com.ecommerce.product_api.dto.ProductDTO;
 import com.ecommerce.product_api.model.Category;
 import com.ecommerce.product_api.model.Product;
 import com.ecommerce.product_api.repository.CategoryRepository;
 import com.ecommerce.product_api.repository.ProductRepository;
-import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
+import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
@@ -61,19 +63,6 @@ public class ProductService {
         if (product.isPresent()) {
             productRepository.delete(product.get());
         }
-    }
-
-    public ProductDTO editProduct(long id, ProductDTO dto) {
-        Product product = productRepository.findById(id).orElseThrow( () ->
-                new RuntimeException("Product not found"));
-
-        if (dto.getNome() != null && !dto.getNome().isEmpty()) {
-            product.setNome(dto.getNome());
-        }
-        if (dto.getPreco() != null) {
-            product.setPreco(dto.getPreco());
-        }
-        return ProductDTO.convert(productRepository.save(product));
     }
 
     public Page<ProductDTO> getAllPage(Pageable page) {
